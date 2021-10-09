@@ -5,12 +5,16 @@ using UnityEngine;
 using Cinemachine; 
 using VolcanicPig;
 using VolcanicPig.Mobile;
+using VolcanicPig.Utilities;
 
 namespace Game
 {
     public class CameraController : SingletonBehaviourSerialized<CameraController>
     {
         public Dictionary<string, CinemachineVirtualCameraBase> cameraMap;
+
+        [SerializeField] private FollowTargetsPosition cameraFollowTarget; 
+        
         private CinemachineVirtualCameraBase _currCamera;
 
         private void OnEnable()
@@ -70,6 +74,11 @@ namespace Game
 
             cameraBase = null;
             return false; 
+        }
+
+        public void SetFollowTarget(Transform target)
+        {
+            cameraFollowTarget.SetTarget(target);
         }
     }
 }
