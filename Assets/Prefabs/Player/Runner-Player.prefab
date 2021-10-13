@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6675593442543429080}
   - component: {fileID: 5715206932755294514}
-  - component: {fileID: 3105222230090407986}
+  - component: {fileID: 7470553071858959574}
   - component: {fileID: 6675593442543429086}
   - component: {fileID: 6675593442543429081}
   - component: {fileID: 6675593442543429083}
@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f7f40859215b949ad358a5d36c2a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3105222230090407986
+--- !u!114 &7470553071858959574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,14 +58,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 6675593442543428645}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c85b1da21131124e8dcc00378d7a022, type: 3}
+  m_Script: {fileID: 11500000, guid: a9bc4377f17c01b4eba76742d3b044b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   deltaMultiplier: 500
-  forwardsSpeed: 3
-  sideSpeed: 50
+  forwardsSpeed: 10
+  sideSpeed: 10
   minYRot: -45
   maxYRot: 45
+  minXPos: -5
+  maxXPos: 5
 --- !u!114 &6675593442543429086
 MonoBehaviour:
   m_ObjectHideFlags: 0

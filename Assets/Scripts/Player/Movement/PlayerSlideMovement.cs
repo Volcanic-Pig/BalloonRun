@@ -8,6 +8,8 @@ namespace Game
     [RequireComponent(typeof(Rigidbody))]
     public class PlayerSlideMovement : PlayerMovement
     {
+        [SerializeField] private float minXPos, maxXPos; 
+        
         public override void HandleMovement()
         {
             if (_automatedMovementActive) return;
@@ -18,7 +20,7 @@ namespace Game
             if (_canMoveSideways)
             {
                 cachedPosition.x += touchDelta.x * sideSpeed * Time.deltaTime;
-                cachedPosition.x = Mathf.Clamp(cachedPosition.x, -5, 5);
+                cachedPosition.x = Mathf.Clamp(cachedPosition.x, minXPos, maxXPos);
             }
 
             if (_canMoveForwards)
@@ -31,7 +33,7 @@ namespace Game
                 _isMoving = false; 
             }
 
-            float step = sideSpeed * Time.deltaTime;
+            float step = Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, cachedPosition, step);
         }
     }
